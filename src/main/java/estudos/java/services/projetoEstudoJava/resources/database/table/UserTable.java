@@ -1,19 +1,18 @@
 package estudos.java.services.projetoEstudoJava.resources.database.table;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class UserTable {
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private Long id;
     private String name;
     private String cpf;
     private String email;
 
-    public User(Long id, String name, String cpf, String email) {
+    public UserTable(Long id, String name, String cpf, String email) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;

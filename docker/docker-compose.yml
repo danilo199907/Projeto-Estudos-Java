@@ -1,0 +1,23 @@
+version: '3.8'
+name: projeto-estudos-java
+
+services:
+  db-postgres:
+    container_name: "db-postgres"
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DATABASE: java_test
+      POSTGRES_USER: java_test
+      POSTGRES_PASSWORD: java_test
+
+  #aws-localstack:
+    #container_name: "aws-localstack"
+    #image: localstack/localstack:latest
+    #environment:
+      #- SERVICES=sqs,sns
+      #- AWS_DEFAULT_REGION=us-east-1
+    #ports:
+      #- '4566-4597:4566-4597'
