@@ -1,5 +1,5 @@
 CREATE TABLE users (
-  id INT PRIMARY KEY,
+  id serial PRIMARY KEY,
   cpf VARCHAR,
   name VARCHAR,
   email VARCHAR

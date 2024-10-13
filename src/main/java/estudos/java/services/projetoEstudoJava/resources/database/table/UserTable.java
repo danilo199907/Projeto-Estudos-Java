@@ -6,14 +6,13 @@ import jakarta.persistence.*;
 @Table(name = "users")
 public class UserTable {
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String cpf;
     private String email;
 
-    public UserTable(Long id, String name, String cpf, String email) {
-        this.id = id;
+    public UserTable(String name, String cpf, String email) {
         this.name = name;
         this.cpf = cpf;
         this.email = email;
